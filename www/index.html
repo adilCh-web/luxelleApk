@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxelle App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+    
+</head>
+<body>
+
+    <div id="container">
+        <div id = "main">
+            <nav id="navHeading">
+                <ul>
+                    <a id ="deleteData">Effacer Data</a>
+                        
+                    <a id="loadSubNav" >Montrer Data <i id = "arrow" class="fa fa-caret-down"></i></a>
+                    <a id="loadGraph" >Graphe </a>
+                    <a id="logOut"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                </ul>
+            </nav>
+            <div id="subNav">
+                <nav>
+                    <li><a id ="loadDataTransactions" >ventes/Profites</a></li>
+                    <li><a id="showDataSuppliers">Fourniseurs</a></li>
+                    <li><a id = "showDataCredit">Credit</a></li>
+                </nav>
+                <div>
+                    <div class="white">
+                        <h2>.....<span>Luxelle</span>Data</h2>
+                        <p class="dev">Developed By AdilChorfi</p>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <figure>
+                <img src="./logo-removebg-preview.png" alt="logo">
+    
+            </figure>
+    
+            <div class="form">
+    
+                <hr>
+                <div class="flex">
+                    <div>
+                        <label><input type="number" id="invest" required> Investissement</label>
+                    </div>
+                    <div>
+                        <label><input type="number" id="return" required> Revenue</label>
+                    </div>
+                </div>
+                <hr>
+                <label id="info">Some of the Data are messing !!</label>
+                <div>
+                        <button id="s">Enregistrer</button>
+                </div>
+            </div>
+            <div id="transActionsTables">
+                <table id="header">
+                    <tr>
+                        <th>Date </th>
+                        <th>Achats</th>
+                        <th>Ventes</th>
+                        <th>Profit</th>    
+                    </tr>
+                </table>
+                <table id="data">
+                <!-- here we insert the data (profits invests ....etc)-->
+                </table>
+                <table id="insight">
+                    <tr>
+                        <th>Total capital</th>
+                        <th>Total Revenue</th>
+                        <th>Total Profit</th>
+                        <th>Moyenne Profit/Piece</th>
+                    </tr>
+                    <tr>
+                        <td id = "tInvest">£0</td>
+                        <td id="tReturn">£0</td>
+                        <td id="totalProfit">£0</td>
+                        <td id ="avgProfit">0%</td>
+                    </tr>
+                </table>
+            </div>
+            <table id="suppliersTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Nom</th>
+                    <th>Montant</th>
+                </tr>
+            </table>
+    
+            <table id="creditsTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Nom</th>
+                    <th>Montant</th>
+                </tr>
+
+            </table>
+
+            <div id="canvas">
+                <canvas id="first" >
+                </canvas>
+                <canvas id="second" >
+                </canvas>
+            </div>
+        </div>
+
+        </div>
+        <div id="logInComponent">
+            <div>
+                <div class="white">
+                    <h2>.....<span>Luxelle</span>Data</h2>
+                    <p class="dev">Developed By AdilChorfi</p>
+                </div>
+                <input type="password" placeholder = "Password" id="password" >
+                <button id="logIn" >Log In</button>
+                <p class = "passwordErr"></p>
+            </div>
+
+        </div>
+
+
+</div>  
+
+</body>
+<script src="index.js" type = "module"></script>
+
+</html>

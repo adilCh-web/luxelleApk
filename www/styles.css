@@ -1,0 +1,419 @@
+*
+{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    /*border:1px solid black;*/
+}
+
+#main{
+    display:none;
+    background-color: rgba(24, 22, 22,.8);
+    min-height:100vh;
+    min-width:300px;
+    padding-bottom:50px;
+    position:relative;
+  }
+
+  #logInComponent{
+    background-color: black;
+    color:white;
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .passwordErr{
+    font-size:18px;
+    margin:0px 40px;
+    text-align: center;
+    font-weight: bolder;
+
+  }
+
+#password{
+    width:200px;
+    display:block;
+    margin:auto auto;
+    text-align: center;
+    background-color: black;
+    border:5px gray;
+    font-size: 25px;
+    padding:5px;
+
+}
+
+  #logInComponent button{
+    margin:25px auto;
+    color:red;
+    padding:10px;
+    color:white;
+    width:200px;
+    font-size:20px;
+
+  }
+
+/*to fade in the subNav when we display it*/
+@keyframes fade_in_show {
+    0% {
+         opacity:0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+}
+
+/*to fade out the subNav before display none (settimeout)*/
+@keyframes fade_out_show {
+    0% {
+         opacity: 1;
+         transform: scale(1);
+    }
+
+    100% {
+         opacity: 0;
+         transition: scale(0);
+    }
+}
+
+.form
+{
+    width:80%;
+    min-width: 200px;
+    margin:auto auto;
+    padding:5px;
+    color:white;
+    font-weight: bolder;
+
+    
+}
+
+img
+{
+    width:50%;
+    display:block;
+    margin:85px auto 0px auto;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+
+}
+
+
+#container
+{
+    width:80%;
+    margin:0px auto;
+    /*background-color: rgb(173, 173, 177);*/
+    background-image: url("New-folder-1170x658_.jpg");
+    
+    }
+
+
+body
+{
+    background-color: brown;
+
+}
+.form div
+{
+    margin:10px 
+}
+input
+{
+    font-size: 20px;
+    width:100px;
+    color:brown;
+    font-weight: 700;
+}
+
+table tr
+{
+    padding:2px;
+}
+table th, table td
+{
+    padding:5px 0px;
+    border-bottom: 1px solid ;
+    width:250px; /*giving it a bigger size to make all the cells igual (insight and data table) */
+    text-align:center;
+}
+table
+{
+    margin: auto auto;
+    border:3px solid black;
+    width:80%;
+    max-width:750px;
+
+}
+
+#insight
+{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    margin-bottom: 30px;
+}
+
+
+#data tr,#suppliersTable tr,#creditsTable tr
+{
+    background-color: brown;
+    color:white;
+}
+button
+{
+    margin: auto auto;
+    display:block;
+    padding:15px;
+    border:none;
+    background-color: brown;
+    color:white;
+    margin-bottom: 30px;
+    border:none;
+   
+}
+
+button:active
+{
+    background-color: rgb(170, 102, 102);
+}
+
+hr
+{
+    background-color: grey;
+    margin:10px;
+  
+}
+span
+{
+    color:brown;
+    font-size:35px
+}
+
+h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+.dev
+{
+    font-style: italic;
+    font-size:8px;
+    padding-bottom:20px;
+    font-weight: 800;
+    margin-top:-3px;
+    text-align:center;
+
+}
+
+
+.flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex input{
+    display:block;
+    margin:auto auto;
+}
+
+
+#totalProfit,#treturn,#tProfit,#avgProfit
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#navHeading ul
+{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    background-color: black;
+    padding:20px;
+
+}
+
+#navHeading{
+    position:sticky;
+    top:0;
+    width:100%;
+    right:0;
+    z-index:500;
+}
+
+
+
+
+#canvas{
+    background-color: rgba(255, 255, 255, 0.8); 
+    margin:auto auto;
+    padding:10px;
+    border-radius: 30px;
+    color:white;
+    border:5px black solid;
+    overflow: scroll;
+    
+    margin:auto auto;
+}
+
+#info{
+    color:red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    margin:0px auto;
+    display:block;
+    text-align: center;
+    visibility: hidden;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+    
+}
+
+
+#subNav{
+    display:none;
+    background-color: black;
+    position:sticky;
+    top:50px;
+    min-width:300px;
+    width:100%;
+    justify-content: space-around;
+    padding:5px 0px;
+    z-index: 300;
+}
+
+#subNav li:hover{
+    background-color: brown;
+    border:1px solid white;
+
+}
+
+#creditsTable{
+    
+    border:2px solid black;
+    display:none;
+}
+#subNav li{
+    padding:5px 10px;
+
+
+}
+
+
+#suppliersTable{
+    display:none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.flexColumn{
+    display:flex;
+    flex-direction: column;
+    border:5px solid black;
+}
+
+.unset{
+    margin:unset;
+    padding:unset;
+    width:100%;
+    margin:auto auto;
+    height:20px;;
+    display:block;
+    margin:0px auto
+}
+
+
+
+#creditsTable td{
+    border-bottom: none ;
+}
+th{
+        background-color: black;
+        color:white;
+        text-align: left;
+        padding:5px;
+    
+}
+
+.flexColumn button, .flexColumn input{
+    max-width:200px;
+    width:80%;
+    margin:auto auto;
+}
+
+.flexColumn button{
+    background-color:black;
+    color:white;
+
+}
+
+.flexColumn td{
+    width:375px; /*making them bigger to be able to cover all the row ps: max of the table is 750px */
+    margin:0px auto;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    table th, table td{
+        font-size:12px;
+        font-weight:bold;
+    }
+    #canvas{
+        min-width:300px;
+        margin:auto auto;
+        display:block;
+    }
+    
+    #container{
+        width:auto;
+    }
+    img{
+        width:60%;
+    }
+    a{
+        font-size:12px;
+    }
+    .unset{
+        height:15px;
+    }
+
+    .flexColumn button, .flexColumn input{
+        min-width:50px;
+        width:40%;
+        margin:auto auto; 
+    }
+
+    .unset{
+        font-size: 10px;
+    }
+
+  }
+
+  .white{
+    margin-top:5%;
+    color:white;
+    height:60%;
+    margin-bottom: 5%;
+  }
+
+
+#totalCredit{
+    background-color: black;
+    color:white;
+    text-align: center;
+    font-size:18px;
+    width:100%;
+}
