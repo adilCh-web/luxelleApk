@@ -8,7 +8,6 @@ let creditsTable = document.getElementById("creditsTable")
 let graphs = document.getElementById("canvas")
 
 
-
 function loadData()
 {
     document.getElementById("arrow").className = "fa fa-caret-down"
@@ -24,7 +23,7 @@ function loadData()
 
     document.getElementById("subNav").style.animation = "fade_out_show 2s";
     setTimeout(() => {
-        document.getElementById("subNav").style.display="none"
+        document.getElementById("subNav").style.visibility="hidden"
     }, 1000);
 
     document.getElementById("transActionsTables").style.display="block"

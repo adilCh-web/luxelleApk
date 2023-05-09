@@ -1,4 +1,5 @@
 import updateData from "./updateTransactions.js";
+import totalSuppliersAmount from "./totalSuppliersAmount.js";
 import loadCredits from "./loadCredits.js";
 let letmyArray;
 let dataTable = document.getElementById("data")
@@ -101,6 +102,12 @@ function submitting()
                 )
             //stringify it and storing it in the database (localstorage)
             localStorage.setItem("suppliers",JSON.stringify(suppliersData))
+            //we delete the previous totalAmount row and it will be added with the totalSuppliersAmount function later 
+            if(document.getElementById("totalSupplierRow")  !==null){
+                document.getElementById("totalSupplierRow").remove()
+            }
+            totalSuppliersAmount()
+
         } 
         else if(type === "creditsData"){
             let name = document.getElementById("invest").value
